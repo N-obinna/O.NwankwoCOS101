@@ -4,7 +4,8 @@ fn main() {
 
 	println!("hello ");//prints
 
-	println!("format {} arguments", "some"); //prints format some arguments
+	println!("format {} arguements", "some"); //prints format some arguements
+
+	println!("My name is {}. I am the class rep of of stream 1","Dagogo William-Jumbo");
 	
-	println!("My name is {}. I am class rep of stream 1","Dagogo William-Jumbo");
 }
