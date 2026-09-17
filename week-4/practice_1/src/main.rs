@@ -1,20 +1,27 @@
+// Rust program to calculate the area of a triangle given three sides
+
 use std::io;
 
 fn main() {
-    println!("\nStudent Information Management System!");
+    let mut input1 = String::new();
+    let mut input2 = String::new();
+    let mut input3 = String::new();
 
-    // input name
-    println!("\nPlease Enter your name.");
-    let mut name = String::new();
-    io::stdin()
-        .read_line(&mut name)
-        .expect("Failed to read input");
-    println!("Your name is: {}", name);
+    println!("Enter first edge of triangle: ");
+    io::stdin().read_line(&mut input1).expect("Not a valid string");
+    let a: f32 = input1.trim().parse().expect("Not a valid number");
 
-    // input age
-    println!("\nEnter your age.");
-    let mut age = String::new();
-    io::stdin().read_line(&mut age).expect("Failed to read input");
-    let age: i32 = age.trim().parse().expect("Input not an integer");
-    println!("Your age is: {}", age);
+    println!("Enter second edge of triangle: ");
+    io::stdin().read_line(&mut input2).expect("Not a valid string");
+    let b: f32 = input2.trim().parse().expect("Not a valid number");
+
+    println!("Enter third edge of triangle: ");
+    io::stdin().read_line(&mut input3).expect("Not a valid string");
+    let c: f32 = input3.trim().parse().expect("Not a valid number");
+
+    let s: f32 = (a + b + c) / 2.0;
+    let mut area: f32 = s * (s - a) * (s - b) * (s - c);
+    area = area.sqrt();
+
+    println!("Area of a triangle: {}", area);
 }
